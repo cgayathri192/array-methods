@@ -1,0 +1,140 @@
+Javascript Array Methods
+
+map()
+   It will create a new array with the results of calling a provided function on every 
+   element in this array
+   const arr = [1,2,3,4,5]
+   const mappedarr = arr.map(x => x+30)
+   console.log(mappedarr)
+
+filter()
+   It will create a new array with only elements that passes the condition inside the 
+   provided function
+   const arr = [1,3,4,5,2]
+   const filteredarr = arr.filter(x => x%2)
+   console.log(filteredarr)   
+
+sort()
+   It is used to arrange/sortarrays elements either in ascending or descending order
+   const arr = [1,2,3,4,5,6]
+   descend = arr.sort((a,b) => a > b ? -1 : 1)
+   console.log(descend)  
+
+   const alphabet = ["g","f","z","h","d"] 
+   ascend = arr.sort((a,b) => a>b ? 1 : -1)
+   console.log(ascend)   
+   
+forEach()
+   It helps to loop overarray by executing a provided callback function for each element 
+   in an array   
+   const arr = [1,2,3,4]
+    arr.forEach(element => {
+	  console.log(element)
+	})
+
+concat()
+    It is used to merge two or more arrays and returns a new array without changing the existing 
+	arrays
+	const arr1 = ["a","b","c","d"]
+	const arr2 = [1,2,3,4,5,6]
+	console.log(arr1.concat(arr2))
+	
+every()
+    It checks the every element in the array passes the condition returning true or false
+    conditions
+   const arr =  [1,2,3,4,5,6,7,8]
+   const everyarr = arr.every(num => num>3)
+   const everyarr1 = arr.every(num => num<6)
+   console.log(everyarr)
+   console.log(everyarr1)   
+
+some()
+   It checks atleast an element in the array passes the condition returning true or false
+   const arr = [1,2,3,4,5,6,7,8]
+   const somearr = arr.some(num => num > 5)
+   const somearr1 = arr.some(num => num < 4)
+   console.log(somearr)
+   console.log(somearr1)
+
+includes()
+   It checks that element includes in an array that passes the condition returns true or false
+   const arr = [1,2,3,4,5]
+   const includesarr = arr.includes((2)) 
+   console.log(includesarr)   
+   
+Join()
+   It returns a new string by concatenating all of the arrays elements seperated by the 
+   specified seperator
+   const arr = ["G","a","y","a","t","h","r","i"]
+   console.log(arr.join())
+
+reduce()
+   It applies a function against an accumulator and each element in the array to reduce it 
+   to a single value 
+   const arr = [1,2,3,4,5]
+   const reduced = arr.reduce((total,current) => total + current)
+   console.log(reduced)   
+   
+find()
+   It returns the first element in an array that pass the test in a testing function
+    const arr = [1,2,3,4,5,6]
+    const findarr = arr.find(x => x=5)
+    console.log(findarr)	
+	
+findIndex()
+   It returns the index of the first element in an array that pass the test in a testing 
+   function
+   const arr = [1,2,3,4,5,6]
+   const Indexarr = arr.findIndex(x => x==2)
+   console.log(Indexarr)
+
+indexOf()
+   It returns the index of the first occurence of the specified element in the array or
+   -1 if it is not found 
+   const arr = [1,2,3,4,5]
+   const indexarr = arr.indexOf(2)
+   console.log(indexarr)   
+   
+fill()
+   It fills the element in the array with a static value and returns the modified array
+   const arr = new Array(3)
+   console.log(arr)
+   console.log(arr.fill(10))
+   
+slice()
+   It returns a new array with specified start to end elements
+   const arr = ["a","b","c","d","e"]
+   const slicedarr = arr.slice(2,4)
+   console.log(sliced)
+   console.log(arr)
+   
+reverse()
+   It reverses an array in a place.Element at last index will be first and element at 0
+   index will be last
+   const arr = [1,2,3]
+   arr.reverse();
+   console.log(arr)   
+
+push()
+   It adds one or more element to the end of the array and returns the new length of the array
+   const fruits = ["apple","peach"]
+   console.log(fruits.push("Banana"))
+   console.log(fruits)
+
+pop()
+   It removes the last element from the end of array and returns that element
+   const fruits = ["Apple","Banana","Peach"]
+   console.log(fruits.pop())   
+   
+shift()
+   It removes the first element from an array and returns that element   
+   const fruits = ["Apple","Peach"]
+   fruits.shift()
+   console.log(fruits)
+
+unshift()
+   It adds one or more element to the beginning of an array and returns the new 
+   length of the array   
+   const fruits = ["Apple","Banana"]
+   console.log(fruits.unshift("peach"))
+   console.log(fruits)
